@@ -55,6 +55,7 @@ def accountCreation():
         else:
             print("Error: Passwords do not match")
             continue
+    asterisks = ""
     for i in range(len(password)-4):
         asterisks =  asterisks + "*"
     newPassword = password[0:2] + asterisks + password[len(password)-2:len(password)]
@@ -157,6 +158,7 @@ def accountCreation():
     #Information Encryption
     uName = username.encode()
     pWord = password.encode()
+    eMail = email.encode()
     key = Fernet.generate_key()
     StrKey = key.decode()
     fernetCode = Fernet(key)
@@ -164,6 +166,8 @@ def accountCreation():
     uName = uName.decode()
     pWord = fernetCode.encrypt(pWord)
     pWord = pWord.decode()
+    eMail = fernetCode.encrypt(eMail)
+    eMail = eMail.decode()
 
     #Information Append
     def accountidWrite(info):
@@ -182,26 +186,13 @@ def accountCreation():
     accountidWrite("Source Code:\n\n" + StrKey + "\n\n")
     accountidWrite(uName + "\n\n")
     accountidWrite(pWord + "\n\n")
+    accountidWrite(eMail + "\n\n")
 
     #End
     print("Congratulations!\nYou're Information Manager Account has been created!\nWhenever you need to log in, you will need your username and your password. You will get an email with a login code.\nRestart the program and log in to start inputting information.\nThank you for registering and we hope this program helps you.")
-
+    sys.exit()
 
 
 accountCreation()
-print(username)
-
-#while True:
-    #print("Please type in the full file path for the directory location that you would like to store your information")
-    #path = input()
-    #goodPath = os.path.isdir(path)
-    #if goodPath == True:
-        #print("Great! All your files will be saved into this directory ")
-        #break
-    #else:
-        #print("Error: " + path + " is not recognized as a directory in the file system.\n")
-        #continue
 
 
-#appendAccount = open("accountID.txt", "a")
-    #appendAccount.write("")

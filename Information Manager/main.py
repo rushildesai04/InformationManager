@@ -5,7 +5,6 @@ print("If you have an account, you will need to verify yourself")
 print("If you are new, You will need to create an account\n")
 
 
-
 #import pathlib
 #import os.path
 #import filecmp
