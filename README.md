@@ -2,7 +2,7 @@
 
 
 Hi! Welcome to the Information Manager. 
-This is an application where a person can input any type of data (Passwords, documents, etc) that can be accessed at anywhere, at any time, securely. 
+The Information Manager is an application where a person can input and store any type of data (Passwords, Documents, etc.) in a place that can be accessed anywhere and at any time in a safe and secure manner.
 
 ***The entirity of this program is written in python.***
 
