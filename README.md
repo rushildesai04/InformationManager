@@ -8,7 +8,7 @@ The Information Manager is an application where a person can input and store any
 
 Thank you for using the Information Manager.
 
--  rush-bot and Yagn3sh
+-  rush-bot
 
 
 **Introduction**
